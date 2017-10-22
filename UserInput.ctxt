@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=UserInput
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ UserInput\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=UserInput()
+comment1.text=\r\n\ Create\ a\ new\ InputReader\ that\ reads\ text\ from\ the\ text\ terminal.\r\n
+comment2.params=
+comment2.target=java.lang.String\ getInput()
+comment2.text=\r\n\ Method\ getInput\r\n\r\n\ @return\ The\ return\ value\r\n
+comment3.params=prompt
+comment3.target=java.lang.String\ getInput(java.lang.String)
+comment3.text=\r\n\ Method\ getInput\r\n\r\n\ @param\ prompt\ A\ parameter\r\n\ @return\ The\ return\ value\r\n
+comment4.params=prompt
+comment4.target=java.lang.String\ getMultilineInput(java.lang.String)
+comment4.text=\r\n\ Method\ getMultilineInput\r\n\r\n\ @param\ prompt\ A\ parameter\r\n\ @return\ The\ return\ value\r\n
+numComments=5

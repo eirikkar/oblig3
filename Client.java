@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 /**
  * Client functions as an interface between a user and the network. The 
@@ -10,19 +9,21 @@ import java.util.Scanner;
  */
 public class Client
 {
-    private Scanner reader;
     private Network network;
     private Person user;
-    
     /**
-     * Create a new InputReader that reads text from the text terminal.
+     * 
      */
     public Client()
     {
-        reader = new Scanner(System.in);
         network = Network.getNetwork();
     }
     
+    /**
+     * main Method
+     *
+     * @param args A parameter
+     */
     public static void main(String[] args) {
         Client nc = new Client();
         nc.start();
@@ -43,9 +44,10 @@ public class Client
      * The method is incomplete. See assignments 2 and 4.
      */
     public void start() {
+        UserInput ui = new UserInput();
         boolean loggedIn = false;
         while(!loggedIn) {
-            String username = getInput("Username: ");
+            String username = ui.getInput("Username: ");
             user = network.lookupPerson(username);
             loggedIn = user != null;
         }
@@ -54,15 +56,15 @@ public class Client
         
         boolean finished = false;
         while(!finished) {
-            String userInput = getInput();
+            String userInput = ui.getInput();
             
             if(userInput.equals("bye")) {
                 finished = true;
             } else if(userInput.equals("message")) {
-                String recipientName = getInput("To: ");
+                String recipientName = ui.getInput("To: ");
                 Person recipient = network.lookupPerson(recipientName);
                 if (recipient != null) {
-                    String messageBody = getMultilineInput("Message: ");
+                    String messageBody = ui.getMultilineInput("Message: ");
                     Message message = new Message(user, recipient, messageBody);
                     MessageDatabase.addMessage(message);
                 }
@@ -76,11 +78,20 @@ public class Client
         printGoodbye();
     }
     
+    /**
+     * Method printWelcome
+     *
+     */
     private void printWelcome() {
         System.out.println("Welcome to the messaging client, " 
             + user.getName() + ".");
         System.out.println("Type 'help' to get instructions.");
     }
+    
+    /**
+     * Method printMessages
+     *
+     */
     private void printMessages() {
         for (Message m : MessageDatabase.getMessagesTo(user)) {
             if (user.equals(m.getRecipient())) {
@@ -91,37 +102,23 @@ public class Client
             
         }
     }
+    
+    /**
+     * Method printGoodbye
+     *
+     */
     private void printGoodbye() {
         System.out.println("Good bye, " + user.getName() + "!");
     }
 
+    /**
+     * Method printHelp
+     *
+     */
     private void printHelp() {
         System.out.println("Type 'message' to send a message");
         System.out.println("Type 'read' to read recived messages");
         System.out.println("Type 'bye' to exit the program");
     }
-    private String getInput() 
-    {
-        return getInput("> ");
-    }
     
-    private String getInput(String prompt) {
-        System.out.print(prompt);                // print prompt
-        String inputLine = reader.nextLine();
-        return inputLine;
-    }
-    
-    private String getMultilineInput(String prompt) {
-        System.out.println(prompt);
-        
-        String result = "";
-        while(true) {
-            String inputLine = reader.nextLine();
-            if(inputLine.equals("")) {
-                return result;
-            } else {
-                result += inputLine + "\n";
-            }
-        }
-    }
 }

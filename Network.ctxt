@@ -1,21 +1,21 @@
 #BlueJ class context
 comment0.target=Network
-comment0.text=\n\ Write\ a\ description\ of\ class\ Network\ here.\ Remember\ to\ write\ \n\ a\ good\ class\ description,\ and\ your\ self\ as\ the\ author.\n\n\ @author\ Truls\ Pedersen\n\ @version\ 2017.10.10\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Network\ here.\ Remember\ to\ write\ \r\n\ a\ good\ class\ description,\ and\ your\ self\ as\ the\ author.\r\n\r\n\ @author\ Truls\ Pedersen\r\n\ @version\ 2017.10.10\r\n
 comment1.params=
 comment1.target=Network\ getNetwork()
 comment2.params=
 comment2.target=Network()
-comment2.text=\n\ Constructor\ for\ objects\ of\ class\ Network\n
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ Network\r\n
 comment3.params=
 comment3.target=void\ loadNetwork()
-comment3.text=\n\ Method\ loadNetwork\ loads\ every\ agents'\ list\ of\ friend.\ (1.b)\n
+comment3.text=\r\n\ Method\ loadNetwork\ loads\ every\ agents'\ list\ of\ friend.\ (1.b)\r\n
 comment4.params=personName
 comment4.target=Person\ lookupPerson(java.lang.String)
-comment4.text=\n\ Method\ lookupPerson\ searches\ through\ our\ collection\ of\ agents\n\ and\ returns\ the\ agent\ which\ has\ the\ same\ name\ as\ the\ given\ parameter.\n\ Part\ of\ exercise\ (1.a).\n\n\ @param\ agentName\ The\ name\ of\ the\ agent\ we\ are\ searching\ for\n\ @return\ The\ agent\ we\ searched\ for,\ or\ null\ if\ none\ is\ found\n
+comment4.text=\r\n\ Method\ lookupPerson\ searches\ through\ our\ collection\ of\ agents\r\n\ and\ returns\ the\ agent\ which\ has\ the\ same\ name\ as\ the\ given\ parameter.\r\n\ Part\ of\ exercise\ (1.a).\r\n\r\n\ @param\ agentName\ The\ name\ of\ the\ agent\ we\ are\ searching\ for\r\n\ @return\ The\ agent\ we\ searched\ for,\ or\ null\ if\ none\ is\ found\r\n
 comment5.params=personName
 comment5.target=java.util.ArrayList\ friends(java.lang.String)
-comment5.text=\n\ Method\ friends\ returns\ a\ list\ of\ a\ given\ person's\ friends.\n\n\ @param\ personName\ A\ name\ of\ the\ person\ whose\ friends\ you\ want\ to\ find\n\ @return\ A\ list\ containing\ the\ names\ of\ the\ given\ person's\ friends\n
+comment5.text=\r\n\ Method\ friends\ returns\ a\ list\ of\ a\ given\ person's\ friends.\r\n\r\n\ @param\ personName\ A\ name\ of\ the\ person\ whose\ friends\ you\ want\ to\ find\r\n\ @return\ A\ list\ containing\ the\ names\ of\ the\ given\ person's\ friends\r\n
 comment6.params=
 comment6.target=void\ printNetwork()
-comment6.text=\n\ Method\ printNetwork\ prints\ the\ network.\ It\ prints\ the\ name\ of\ every\ person\n\ where\ each\ name\ is\ immediately\ preceded\ by\ the\ names\ of\ their\ friends.\n
+comment6.text=\r\n\ Method\ printNetwork\ prints\ the\ network.\ It\ prints\ the\ name\ of\ every\ person\r\n\ where\ each\ name\ is\ immediately\ preceded\ by\ the\ names\ of\ their\ friends.\r\n
 numComments=7

@@ -17,6 +17,7 @@ public class TestMessageDatabase
     {
         testReset();
     }
+    
     /**
      * Method testReset
      * 
