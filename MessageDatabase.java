@@ -111,8 +111,15 @@ public class MessageDatabase
      * @return All messages to the given recipient from her/his friends
      */
     public static ArrayList<Message> getMessagesFromFriendsTo(Person recipient) {
-        ArrayList<Message> allMessages = getMessages();
-        return allMessages;
+        for (Message m : getMessages() ) {
+            ArrayList<Message> allMessages = getMessages();
+            for (Person p : recipient.getFriends()) {
+                
+                return allMessages;
+            }
+            
+        }
+        return null;
     }
     
     /**
