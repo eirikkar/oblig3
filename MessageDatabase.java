@@ -94,11 +94,8 @@ public class MessageDatabase
      * @return All messages to the given recipient
      */
     public static ArrayList<Message> getMessagesTo(Person recipient) {
-        for (Message m : getMessages() ) {
-            ArrayList<Message> allMessages = getMessages();
-            return allMessages;
-        }
-        return null;
+        ArrayList<Message> allMessages = getMessages();
+        return allMessages;
     }
     
     /**
@@ -111,15 +108,8 @@ public class MessageDatabase
      * @return All messages to the given recipient from her/his friends
      */
     public static ArrayList<Message> getMessagesFromFriendsTo(Person recipient) {
-        for (Message m : getMessages() ) {
-            ArrayList<Message> allMessages = getMessages();
-            for (Person p : recipient.getFriends()) {
-                
-                return allMessages;
-            }
-            
-        }
-        return null;
+        ArrayList<Message> allMessages = getMessages();
+        return allMessages;
     }
     
     /**

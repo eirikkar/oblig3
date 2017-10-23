@@ -72,6 +72,8 @@ public class Client
                 printHelp();
             } else if (userInput.equals("read")) {
                 printMessages();
+            } else if (userInput.equals("friends")) {
+                printMessagesFromFriends();
             }
         }
         
@@ -93,13 +95,24 @@ public class Client
      *
      */
     private void printMessages() {
-        for (Message m : MessageDatabase.getMessagesTo(user)) {
+        for (Message m : MessageDatabase.getMessagesFromFriendsTo(user)) {
             if (user.equals(m.getRecipient())) {
                 System.out.println("From: " + m.getSender().getName());
                 System.out.println("To: " + m.getRecipient().getName());
                 System.out.println(m.getMessageBody());
             }
-            
+        }
+    }
+    
+    private void printMessagesFromFriends() {
+        for (Message m : MessageDatabase.getMessagesTo(user)) {
+            for (Person friend : user.getFriends()) {
+                if (user.equals(m.getRecipient()) && m.getSender().equals(friend)) {
+                    System.out.println("From: " + m.getSender().getName());
+                    System.out.println("To: " + m.getRecipient().getName());
+                    System.out.println(m.getMessageBody());
+                }
+            }
         }
     }
     

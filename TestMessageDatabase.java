@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class TestMessageDatabase
 {
-    
+    private Network network;
     /**
      * Constructor for objects of class TestMessageDatabase
      */
@@ -30,4 +30,19 @@ public class TestMessageDatabase
         assertEquals(0, MessageDatabase.getMessages().size());
     }
     
+    /**
+     * 
+     */
+    @Test
+    public void testIncrement()
+    {
+        network = Network.getNetwork();
+        Message test = new Message(network.lookupPerson("Dag"), network.lookupPerson("Liv"), "test");
+        for (int i = 1 ; i < 11; i++) {
+            MessageDatabase.addMessage(test);
+        }
+        assertEquals(10, MessageDatabase.getMessages().size());
+        
+    }
+
 }
