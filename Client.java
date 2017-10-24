@@ -4,8 +4,8 @@
  * user interacts with the client by typing commands. The user can send messages 
  * to other users.
  * 
- * @author     Truls Pedersen
- * @version    1.0 (2017.10.10)
+ * @author     Eirik Karlsen
+ * @version    1.0 (2017.10.24)
  */
 public class Client
 {
@@ -38,10 +38,10 @@ public class Client
      * The username given must match an existing person exactly. 
      * 
      * During the working-phase the user will send commands to the client. 
-     * The client can send messages (initiated by the command "message") and 
-     * quit (initiated by the command "bye"). 
+     * The client can send messages (initiated by the command "message"), recive message (with the command
+     * "read) and quit (initiated by the command "bye"). 
      *
-     * The method is incomplete. See assignments 2 and 4.
+     * 
      */
     public void start() {
         UserInput ui = new UserInput();
@@ -92,7 +92,7 @@ public class Client
     
     /**
      * Method printMessages
-     *
+     * Prints messages recived to the logged in user.
      */
     private void printMessages() {
         for (Message m : MessageDatabase.getMessagesFromFriendsTo(user)) {
@@ -104,6 +104,10 @@ public class Client
         }
     }
     
+    /**
+     * Method printMessagesFromFriends
+     * Prints messages from friends of the logged in user.
+     */
     private void printMessagesFromFriends() {
         for (Message m : MessageDatabase.getMessagesTo(user)) {
             for (Person friend : user.getFriends()) {
@@ -118,7 +122,7 @@ public class Client
     
     /**
      * Method printGoodbye
-     *
+     * Prints goodbye message.
      */
     private void printGoodbye() {
         System.out.println("Good bye, " + user.getName() + "!");
@@ -126,7 +130,7 @@ public class Client
 
     /**
      * Method printHelp
-     *
+     * Prints the help menu.
      */
     private void printHelp() {
         System.out.println("Type 'message' to send a message");

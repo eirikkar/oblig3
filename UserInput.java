@@ -1,9 +1,10 @@
 import java.util.Scanner;
 /**
- * Write a description of class UserInput here.
+ * This class is responsible for input from the user.
+ * This class creates a scanner object that can accept user input.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Eirik Karlsen
+ * @version 1.0
  */
 public class UserInput
 {
@@ -28,9 +29,9 @@ public class UserInput
     
     /**
      * Method getInput
-     *
-     * @param prompt A parameter
-     * @return The return value
+     * Gets input from the user.
+     * @param prompt
+     * @return input
      */
     public String getInput(String prompt) {
         System.out.print(prompt);                // print prompt
@@ -40,9 +41,9 @@ public class UserInput
     
     /**
      * Method getMultilineInput
-     *
-     * @param prompt A parameter
-     * @return The return value
+     * Gets a multilineinput from user.
+     * @param prompt
+     * @return result
      */
     public String getMultilineInput(String prompt) {
         System.out.println(prompt);

@@ -1,12 +1,14 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
+Oblig 3 Oppgave 5
+a) Kohesjon betyr at en del av programmet (for eksempel en klasse) ikke skal være ansvarlig for for mye. Dette kan lett bli uoversiktlig.
+Ved å flytte de delene av klassen som er ansvarlig for brukerinformasjon i en egen klasse gjør at klassen blir lettere å lese og forstå.
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+b) Kopling betyr hvordan de forskjellige klassene samsvarer med hverandre. Ved tett kopling kan det være vanskelig å gjøre endringer i programmet uten
+at flere funksjoner må endres. Ved løs kopling vil man enklere kunne gjøre endringer uten at andre deler av programmet må endres.
+Man prøver derfor å få så løs kopling som mulig.
+
+c) TSV står for Tab-seperated values, som er et enkelt system for å lagre tekst data. Siden TSV systemet bruker tab til å skille mellom dataene vil det ikke
+godkjennes når programmet skal enkode meldingen.
+
+d) En positiv test tester saken. Denne testen antar at saken lykkes. Begge testoppgavene antaes å lykkes.
+
+e) En negativ test tester saken på samme måte men antar at saken feiler.
