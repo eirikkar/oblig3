@@ -99,20 +99,6 @@ public class MessageDatabase
     }
     
     /**
-     * Method getMessagesFromFriendsTo returns all messages sent to recipient
-     * (given as a parameter) from one of her/his friends.
-     * 
-     * This method is incomplete. See assignment 3.b.
-     *
-     * @param recipient Person whose messages we return
-     * @return All messages to the given recipient from her/his friends
-     */
-    public static ArrayList<Message> getMessagesFromFriendsTo(Person recipient) {
-        ArrayList<Message> allMessages = getMessages();
-        return allMessages;
-    }
-    
-    /**
      * Method setMessages saves a given list of messages as the 
      * entire set of stored messages. We can use this method to 
      * clear the database, but sending an empty list as a parameter.

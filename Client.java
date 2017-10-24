@@ -2,7 +2,7 @@
 /**
  * Client functions as an interface between a user and the network. The 
  * user interacts with the client by typing commands. The user can send messages 
- * to other users.
+ * to other users. And recive messages from users and friends.
  * 
  * @author     Eirik Karlsen
  * @version    1.0 (2017.10.24)
@@ -82,7 +82,7 @@ public class Client
     
     /**
      * Method printWelcome
-     *
+     * Prints a welcome message to the user.
      */
     private void printWelcome() {
         System.out.println("Welcome to the messaging client, " 
@@ -95,7 +95,7 @@ public class Client
      * Prints messages recived to the logged in user.
      */
     private void printMessages() {
-        for (Message m : MessageDatabase.getMessagesFromFriendsTo(user)) {
+        for (Message m : MessageDatabase.getMessagesTo(user)) {
             if (user.equals(m.getRecipient())) {
                 System.out.println("From: " + m.getSender().getName());
                 System.out.println("To: " + m.getRecipient().getName());

@@ -38,10 +38,9 @@ public class TestMessageDatabase
     {
         network = Network.getNetwork();
         Message test = new Message(network.lookupPerson("Dag"), network.lookupPerson("Liv"), "test");
-        for (int i = 1 ; i < 11; i++) {
-            MessageDatabase.addMessage(test);
-        }
-        assertEquals(10, MessageDatabase.getMessages().size());
+        int messageSize = MessageDatabase.getMessages().size();
+        MessageDatabase.addMessage(test);
+        assertEquals(messageSize +1, MessageDatabase.getMessages().size());
         
     }
 
